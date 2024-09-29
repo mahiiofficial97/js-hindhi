@@ -9,3 +9,8 @@ console.log(typeof newstring)
 //1=>true; 0=>false
 //"" =>false
 //"mahesh"=>true
+console.log();
+console.log();
+console.log();
+
+
