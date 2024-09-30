@@ -47,6 +47,8 @@ const myn2=arry.splice(1,4) //splice 1index se lekar 4 index tak number print ka
 console.log("c ",arry);
 console.log(myn2);
 
+
+
  
 
 
