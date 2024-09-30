@@ -68,6 +68,7 @@ console.log(tinderuser.hasOwnProperty("mahiis"));//check the property present or
 
 
 
+ 
 
 
 
