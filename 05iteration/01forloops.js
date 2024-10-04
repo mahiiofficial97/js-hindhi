@@ -4,7 +4,6 @@ for(let i=0;i<10;i++)
   console.log(i);
 }
 
-
 //break and continue keyword in loops
 let no=0;
 for( no =1;no<20;no++)
