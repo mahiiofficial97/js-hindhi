@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chai Aur mahii code</title>
+  </head>
+  <body>
+    <ul class="language">
+      <li>javascript</li>
+      <li>python</li>
+      <li>.net</li>
+      <li>bollang</li>
+    </ul>
+  </body>
+  <script>
+    //first step
+
+    function addlang(langname) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langname}`;
+      document.querySelector(".language").append(li);
+    }
+    addlang("mahiilang");
+
+    //second method optimizwe method
+
+    function addoptionallanguage(langname) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langname));
+      document.querySelector(".language").appendChild(li);
+    }
+
+    addoptionallanguage("javascript");
+    addoptionallanguage("monkeylang");
+
+    //edit
+
+    const secondlang = document.querySelector("li:nth-child(4)"); //4th elemnt will bw change
+    console.log(secondlang);
+    secondlang.innerHTML = "mojo";
+
+    //edit 2nd parth
+    const newli = document.createElement("li");
+    newli.textContent = "mahojo";
+
+    secondlang.replaceWith(newli);
+
+    // Correcting first-child typo
+    const firstlang = document.querySelector("li:first-child");
+    firstlang.outerHTML = `<li>typescript</li>`;
+
+    // Correcting the last-child removal
+    const lastlang = document.querySelector("li:last-child");
+    lastlang.remove();
+
+    const lastlangg = document.querySelector("li:last-child");
+    lastlangg.remove();
+  </script>
+   ̰
+</html>
