@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Local Time</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: gray;
+      }
+
+      #clock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rebeccapurple;
+        color: rgb(247, 243, 243);
+        width: 100vw; /* Full width of viewport */
+        height: 100vh; /* Full height of viewport */
+        font-size: 20vw; /* Text size is 15% of viewport width */
+        text-align: center; /* Center text alignment */
+      }
+
+      #banner {
+        display: contents;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <!-- <div id="banner"><span>Your Local Time</span></div> -->
+      <div id="clock"></div>
+    </div>
+    <script src="clock.js"></script>
+  </body>
+</html>
