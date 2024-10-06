@@ -30,6 +30,9 @@ buttons.forEach(function (button) {
         body.style.backgroundColor = "blue";
         break;
 
+      case "purple":
+        body.style.backgroundColor = "purple";
+
       default:
         console.log("unknown error");
     }
