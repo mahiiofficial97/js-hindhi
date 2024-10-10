@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html Events</title>
+  </head>
+  <body style="background-color: rgb(229, 221, 221)">
+    <h2>Anaylizing images</h2>
+    <div>
+      <ul class="image">
+        <li>
+          <img
+            width="200px"
+            id="image1"
+            src="https://www.w3schools.com/w3images/lights.jpg"
+            alt="Example Image"
+          />
+        </li>
+        <li>
+          <img
+            id="image2"
+            width="200px"
+            src="https://www.w3schools.com/w3images/lights.jpg"
+            alt="Image 1"
+          />
+        </li>
+        <li>
+          <img
+            id="image3"
+            onclick="alert('img3')"
+            width="200px"
+            src="https://www.w3schools.com/w3images/nature.jpg"
+            alt="Image 2"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="image4"
+            src="https://www.w3schools.com/w3images/mountains.jpg"
+            alt="Image 3"
+          />
+        </li>
+        <li>
+          <a href="http://google.com" id="google"> Google</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    //           second approch
+    // document.getElementById("image4").onclick = function () {
+    //   alert("owl");
+    // };
+    //prapogation and bubling
+    document.getElementById("image4").addEventListener(
+      "click",
+      function (e) {
+        console.log(e);
+      },
+      false
+    ); //types,timstamp,target,srcElement,CurrentTarget,Clientx
+
+    //atachedEvent(),//Jquery -on,
+
+    // document.getElementById(".image").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     e.preventDefault();
+    //     console.log("clicke");
+    //   },
+    //   false
+    // );
+
+    document.getElementById("google").addEventListener(
+      "click",
+      function (e) {
+        e.preventDefault();
+        console.log("googleclick");
+      },
+      false
+    );
+
+    document.querySelector(".image").addEventListener(
+      "click",
+      function (e) {
+        console.log(e.target.parentNode);
+      },
+      false
+    );
+
+    //for removing
+    document.querySelector(".image").addEventListener(
+      "click",
+      function (e) {
+        console.log(e.target.parentNode);
+        let removeit = e.target.parentNode;
+        removeit.remove();
+      },
+      false
+    );
+
+    //for specific li remove
+    document.querySelector(".image").addEventListener(
+      "click",
+      function (e) {
+        console.log(e.target.tagName);
+
+        if (e.target.tagName === "img") {
+          console.log(e.target.parentNode);
+          let removeit = e.target.parentNode;
+          removeit.remove();
+        }
+      },
+      false
+    );
+
+    //second appproch remove
+
+    //for removing
+    document.querySelector(".image").addEventListener(
+      "click",
+      function (e) {
+        console.log(e.target.parentNode);
+        let removeit = e.target.parentNode;
+        removeit.remove();
+        //removeit.parentNode.removeChild(removeit);
+      },
+      false
+    );
+  </script>
+</html>
